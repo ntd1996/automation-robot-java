@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite failures="1" skip="0" tests="1" name="Robot" errors="0">
+<testcase classname="Robot.Addnetwork.TSAddNetwork" name="User Attempting To Create Block Of Any Size Where A Netowrk Or Block Currently Exists Should Not Be Possible(Multiple mode)" time="34">
+<failure message="Variable '${STATUS_REQUSET}' not found." type="AssertionError"></failure>
+</testcase>
+</testsuite>

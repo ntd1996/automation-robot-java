@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite failures="2" skip="0" tests="13" name="Pcn" errors="0">
+<testcase classname="Pcn.Addnetwork.Addnetwork" name="User Not Entering An ICCM/Jira Number Should Generate An Error" time="7">
+</testcase>
+<testcase classname="Pcn.Addnetwork.Addnetwork" name="User Enter ID To Text Field Request ID" time="4">
+</testcase>
+<testcase classname="Pcn.Addnetwork.Addnetwork" name="User Failing To Populate Any Require Fields Should Generate An Error" time="6">
+</testcase>
+<testcase classname="Pcn.Addnetwork.Addnetwork" name="User Add Invalid CIDR Should Generate An Error" time="29">
+</testcase>
+<testcase classname="Pcn.Addnetwork.Addnetwork" name="User Add Confilct CIDR Should Generate An Error" time="4">
+</testcase>
+<testcase classname="Pcn.Addnetwork.Addnetwork" name="User Add Outside CIDR Should Generate An Error" time="4">
+</testcase>
+<testcase classname="Pcn.Addnetwork.Addnetwork" name="User Attempting To Create Block Of Any Size Where A Netowrk Or Block Currently Exists Should Not Be Possible" time="4">
+</testcase>
+<testcase classname="Pcn.Addnetwork.Addnetwork" name="User Selecting A Block For Which A User Does Not Have Write Access Should Generate An Error" time="33">
+</testcase>
+<testcase classname="Pcn.Addnetwork.Addnetwork" name="User Submitting A Valid Request Should Result In Appropriate Block Creation With Appropriate Tags Or Created Tags" time="23">
+<failure message="Element xpath=id(&quot;enter-data-next-button&quot;) is disabled." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Pcn.Addnetwork.Addnetwork" name="User Any Attemp To Add Invalid CIDR Should Be Generate An Error(Multiple Mode)" time="39">
+</testcase>
+<testcase classname="Pcn.Addnetwork.Addnetwork" name="User Submitting A Valid Request Should Result In Appropriate Block Creation(Multiple Mode)" time="39">
+</testcase>
+<testcase classname="Pcn.Addnetwork.Addnetwork" name="User Selecting A Block For Which A User Does Not Have Write Access Should Generate An Error(Multiple Mode)" time="40">
+</testcase>
+<testcase classname="Pcn.Addnetwork.Addnetwork" name="User Failing To Populate Any Require Fields Should Generate An Error(Multiple Mode)" time="9">
+<failure message="'xpath=(//input[@type='text'])[6]' should be empty." type="AssertionError"></failure>
+</testcase>
+</testsuite>

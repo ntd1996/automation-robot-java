@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.2 (Jython 2.7.0 on java1.8.0_181)" generated="20180920 09:44:43.587">
+<suite source="D:\sourcePCN\test\src\test\robot" name="Robot" id="s1">
+<suite source="D:\sourcePCN\test\src\test\robot\addnetwork" name="Addnetwork" id="s1-s1">
+<suite source="D:\sourcePCN\test\src\test\robot\addnetwork\TSAddNetwork.robot" name="TSAddNetwork" id="s1-s1-s1">
+<kw type="setup" library="Common" name="User Go To PCN Portal Resource With PCN URL">
+<arguments>
+<arg>${USERNAME_TEST}</arg>
+<arg>${PASSWORD_TEST}</arg>
+</arguments>
+<kw library="SeleniumLibrary" name="Open Browser">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:44:44.349">browserName: Chrome</msg>
+<msg level="INFO" timestamp="20180920 09:44:44.354">Opening browser 'chrome'</msg>
+<msg level="INFO" timestamp="20180920 09:45:13.888">Starting ChromeDriver 2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e) on port 28264
+Only local connections are allowed.
+Sep 20, 2018 9:44:48 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS</msg>
+<status endtime="20180920 09:45:13.890" starttime="20180920 09:44:44.341" status="PASS"></status>
+</kw>
+<kw library="SeleniumLibrary" name="Maximize Browser Window">
+<doc>Maximizes current browser window.</doc>
+<status endtime="20180920 09:45:15.012" starttime="20180920 09:45:13.892" status="PASS"></status>
+</kw>
+<kw library="LoginFunctions" name="User Login To PCN Portal">
+<arguments>
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<kw library="LoginFunctions" name="User Input Text Username And Password">
+<arguments>
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<kw library="LoginActions" name="Input Text Into Username Field">
+<arguments>
+<arg>${USERNAME}</arg>
+</arguments>
+<kw library="SeleniumLibrary" name="Input Text">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${USERNAME}</arg>
+<arg>${DATA}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:15.039">Typing text 'pthethanh@tma.com.vn' into text field 'xpath=id("login_username")'</msg>
+<status endtime="20180920 09:45:15.181" starttime="20180920 09:45:15.034" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:17.184">Slept 2 seconds</msg>
+<status endtime="20180920 09:45:17.185" starttime="20180920 09:45:15.182" status="PASS"></status>
+</kw>
+<status endtime="20180920 09:45:17.186" starttime="20180920 09:45:15.031" status="PASS"></status>
+</kw>
+<kw library="LoginActions" name="Input Text Into Password Field">
+<arguments>
+<arg>${PASSWORD}</arg>
+</arguments>
+<kw library="SeleniumLibrary" name="Input Text">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PASSWORD}</arg>
+<arg>${DATA}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:17.192">Typing text 'pass123' into text field 'xpath=id("login_password")'</msg>
+<status endtime="20180920 09:45:17.282" starttime="20180920 09:45:17.189" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:19.285">Slept 2 seconds</msg>
+<status endtime="20180920 09:45:19.286" starttime="20180920 09:45:17.283" status="PASS"></status>
+</kw>
+<status endtime="20180920 09:45:19.287" starttime="20180920 09:45:17.187" status="PASS"></status>
+</kw>
+<status endtime="20180920 09:45:19.288" starttime="20180920 09:45:15.026" status="PASS"></status>
+</kw>
+<kw library="LoginActions" name="Click Button Login">
+<kw library="SeleniumLibrary" name="Click Button">
+<doc>Click on the button identified by ``locator``.</doc>
+<arguments>
+<arg>${BUTTON_LOGIN}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:19.292">Clicking button 'xpath=id("login_submit-btn")'.</msg>
+<status endtime="20180920 09:45:19.387" starttime="20180920 09:45:19.289" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:21.389">Slept 2 seconds</msg>
+<status endtime="20180920 09:45:21.390" starttime="20180920 09:45:19.388" status="PASS"></status>
+</kw>
+<status endtime="20180920 09:45:21.390" starttime="20180920 09:45:19.288" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>4s</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:25.393">Slept 4 seconds</msg>
+<status endtime="20180920 09:45:25.394" starttime="20180920 09:45:21.391" status="PASS"></status>
+</kw>
+<status endtime="20180920 09:45:25.395" starttime="20180920 09:45:15.016" status="PASS"></status>
+</kw>
+<kw library="SeleniumLibrary" name="Maximize Browser Window">
+<doc>Maximizes current browser window.</doc>
+<status endtime="20180920 09:45:25.399" starttime="20180920 09:45:25.395" status="PASS"></status>
+</kw>
+<status endtime="20180920 09:45:25.400" starttime="20180920 09:44:44.338" status="PASS"></status>
+</kw>
+<test name="User Attempting To Create Block Of Any Size Where A Netowrk Or Block Currently Exists Should Not Be Possible(Multiple mode)" id="s1-s1-s1-t1">
+<kw type="setup" library="Common" name="User Go To Self Service Page">
+<kw library="SeleniumLibrary" name="Click Element">
+<doc>Click on the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SELF_SERVICE}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:25.407">Clicking element 'xpath=id("main-menu-container")/ul/li[contains(text(),"Self-Service")]'.</msg>
+<status endtime="20180920 09:45:25.470" starttime="20180920 09:45:25.404" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:28.472">Slept 3 seconds</msg>
+<status endtime="20180920 09:45:28.473" starttime="20180920 09:45:25.471" status="PASS"></status>
+</kw>
+<status endtime="20180920 09:45:28.473" starttime="20180920 09:45:25.403" status="PASS"></status>
+</kw>
+<kw library="AddNetworkFunctions" name="User Go To Form Add Network">
+<arguments>
+<arg>${ID}</arg>
+</arguments>
+<kw library="AddNetworkActions" name="Click Button Add Network">
+<kw library="SeleniumLibrary" name="Click Button">
+<doc>Click on the button identified by ``locator``.</doc>
+<arguments>
+<arg>${BUTTON_ADD_NETWORK}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:28.479">Clicking button 'xpath=id("add-network-action-button")'.</msg>
+<status endtime="20180920 09:45:28.544" starttime="20180920 09:45:28.477" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:29.547">Slept 1 second</msg>
+<status endtime="20180920 09:45:29.548" starttime="20180920 09:45:28.545" status="PASS"></status>
+</kw>
+<status endtime="20180920 09:45:29.548" starttime="20180920 09:45:28.476" status="PASS"></status>
+</kw>
+<kw library="AddNetworkFunctions" name="User Enter ID To Text Field Request ID And Click Next">
+<arguments>
+<arg>${REQUEST_ID}</arg>
+</arguments>
+<kw library="AddNetworkActions" name="Input Text To Request ID Text Field">
+<arguments>
+<arg>${REQUEST_ID}</arg>
+</arguments>
+<kw library="SeleniumLibrary" name="Input Text">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${TEXT_FILED_REQUEST_ID}</arg>
+<arg>${ID}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:29.553">Typing text '123' into text field 'xpath=id("request-details_change-id")'</msg>
+<status endtime="20180920 09:45:29.620" starttime="20180920 09:45:29.551" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:31.623">Slept 2 seconds</msg>
+<status endtime="20180920 09:45:31.624" starttime="20180920 09:45:29.621" status="PASS"></status>
+</kw>
+<status endtime="20180920 09:45:31.624" starttime="20180920 09:45:29.550" status="PASS"></status>
+</kw>
+<kw library="AddNetworkActions" name="Click Button Next Request ID">
+<kw library="SeleniumLibrary" name="Click Button">
+<doc>Click on the button identified by ``locator``.</doc>
+<arguments>
+<arg>${BUTTON_NEXT_REQUEST}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:31.627">Clicking button 'xpath=id("request-detail-next-button")'.</msg>
+<status endtime="20180920 09:45:31.747" starttime="20180920 09:45:31.625" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:33.750">Slept 2 seconds</msg>
+<status endtime="20180920 09:45:33.751" starttime="20180920 09:45:31.748" status="PASS"></status>
+</kw>
+<status endtime="20180920 09:45:33.751" starttime="20180920 09:45:31.624" status="PASS"></status>
+</kw>
+<status endtime="20180920 09:45:33.752" starttime="20180920 09:45:29.548" status="PASS"></status>
+</kw>
+<status endtime="20180920 09:45:33.752" starttime="20180920 09:45:28.474" status="PASS"></status>
+</kw>
+<kw library="AddNetworkFunctions" name="User Go To Mulltiple Mode">
+<arguments>
+<arg>${LINE_INDEX_1}</arg>
+<arg>${LINE_INDEX_2}</arg>
+</arguments>
+<kw library="AddNetworkActions" name="Click Multiple Mode">
+<kw library="SeleniumLibrary" name="Click Element">
+<doc>Click on the element identified by ``locator``.</doc>
+<arguments>
+<arg>${MULTIPLE_MODE}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:33.757">Clicking element 'xpath=//div[@id='enter-data']/div/core-tab-select/div/div/span[contains(text(), "Multiple")]'.</msg>
+<status endtime="20180920 09:45:33.814" starttime="20180920 09:45:33.755" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:35.816">Slept 2 seconds</msg>
+<status endtime="20180920 09:45:35.817" starttime="20180920 09:45:33.815" status="PASS"></status>
+</kw>
+<status endtime="20180920 09:45:35.817" starttime="20180920 09:45:33.754" status="PASS"></status>
+</kw>
+<kw library="AddNetworkActions" name="Multiple Click Element">
+<arguments>
+<arg>${BUTTON_ADD_MULTI_LINE}</arg>
+<arg>${INDEX_1}</arg>
+<arg>${INDEX_2}</arg>
+</arguments>
+<kw type="for" name="${index} IN RANGE [ ${RANGE1} | ${RANGE2} ]">
+<kw type="foritem" name="${index} = 1">
+<kw library="SeleniumLibrary" name="Click Element">
+<doc>Click on the element identified by ``locator``.</doc>
+<arguments>
+<arg>${LOCATOR_ELEMENT}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:35.827">Clicking element 'css=button.icon-button.background-green'.</msg>
+<status endtime="20180920 09:45:35.891" starttime="20180920 09:45:35.825" status="PASS"></status>
+</kw>
+<status endtime="20180920 09:45:35.892" starttime="20180920 09:45:35.824" status="PASS"></status>
+</kw>
+<kw type="foritem" name="${index} = 2">
+<kw library="SeleniumLibrary" name="Click Element">
+<doc>Click on the element identified by ``locator``.</doc>
+<arguments>
+<arg>${LOCATOR_ELEMENT}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:35.895">Clicking element 'css=button.icon-button.background-green'.</msg>
+<status endtime="20180920 09:45:35.950" starttime="20180920 09:45:35.893" status="PASS"></status>
+</kw>
+<status endtime="20180920 09:45:35.950" starttime="20180920 09:45:35.892" status="PASS"></status>
+</kw>
+<status endtime="20180920 09:45:35.951" starttime="20180920 09:45:35.819" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:38.952">Slept 3 seconds</msg>
+<status endtime="20180920 09:45:38.952" starttime="20180920 09:45:35.951" status="PASS"></status>
+</kw>
+<status endtime="20180920 09:45:38.953" starttime="20180920 09:45:35.818" status="PASS"></status>
+</kw>
+<status endtime="20180920 09:45:38.953" starttime="20180920 09:45:33.752" status="PASS"></status>
+</kw>
+<kw library="AddNetworkFunctions" name="User Input Text To Text Field Multiple Mode">
+<arguments>
+<arg>${CIDR_SMALLER}</arg>
+<arg>${NAME_ADDNETWORK_TS_10_1}</arg>
+<arg>${SUB_GROUP_MULTIPLE_MODE}</arg>
+<arg>${CIDR_SMALLER_MULTIPLE_2}</arg>
+<arg>${NAME_ADDNETWORK_TS_10_2}</arg>
+<arg>${SUB_GROUP_MULTIPLE_MODE}</arg>
+</arguments>
+<kw library="SeleniumLibrary" name="Input Text">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${TEXT_FIELD_6}</arg>
+<arg>${CIDR_INVALID}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:38.958">Typing text '0.1.0.0/17' into text field 'xpath=(//input[@type='text'])[6]'</msg>
+<status endtime="20180920 09:45:39.368" starttime="20180920 09:45:38.956" status="PASS"></status>
+</kw>
+<kw library="SeleniumLibrary" name="Input Text">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${TEXT_FIELD_7}</arg>
+<arg>${NAME_ADDNETWORK}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:39.370">Typing text 'test-addnetwork' into text field 'xpath=(//input[@type='text'])[7]'</msg>
+<status endtime="20180920 09:45:39.945" starttime="20180920 09:45:39.368" status="PASS"></status>
+</kw>
+<kw library="SeleniumLibrary" name="Input Text">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${TEXT_FIELD_8}</arg>
+<arg>${SUB_GROUP_ADDNETWORK}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:39.947">Typing text '0097' into text field 'xpath=(//input[@type='text'])[8]'</msg>
+<status endtime="20180920 09:45:40.137" starttime="20180920 09:45:39.945" status="PASS"></status>
+</kw>
+<kw library="SeleniumLibrary" name="Input Text">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${TEXT_FIELD_9}</arg>
+<arg>${CIDR_INVALID_2}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:40.139">Typing text '0.3.0.0/17' into text field 'xpath=(//input[@type='text'])[9]'</msg>
+<status endtime="20180920 09:45:40.535" starttime="20180920 09:45:40.137" status="PASS"></status>
+</kw>
+<kw library="SeleniumLibrary" name="Input Text">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${TEXT_FIELD_10}</arg>
+<arg>${NAME_ADDNETWORK_2}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:40.537">Typing text 'test-addnetwork' into text field 'xpath=(//input[@type='text'])[10]'</msg>
+<status endtime="20180920 09:45:41.107" starttime="20180920 09:45:40.535" status="PASS"></status>
+</kw>
+<kw library="SeleniumLibrary" name="Input Text">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${TEXT_FIELD_11}</arg>
+<arg>${SUB_GROUP_ADDNETWORK_2}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:41.110">Typing text '0097' into text field 'xpath=(//input[@type='text'])[11]'</msg>
+<status endtime="20180920 09:45:41.298" starttime="20180920 09:45:41.108" status="PASS"></status>
+</kw>
+<status endtime="20180920 09:45:41.298" starttime="20180920 09:45:38.954" status="PASS"></status>
+</kw>
+<kw library="AddNetworkFunctions" name="User Go To Submit Form In Add Network">
+<kw library="AddNetworkActions" name="Click Button Next Enter Data">
+<kw library="SeleniumLibrary" name="Click Button">
+<doc>Click on the button identified by ``locator``.</doc>
+<arguments>
+<arg>${BUTTON_NEXT_ENTER_DATA}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:41.303">Clicking button 'xpath=id("enter-data-next-button")'.</msg>
+<status endtime="20180920 09:45:41.378" starttime="20180920 09:45:41.300" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:43.380">Slept 2 seconds</msg>
+<status endtime="20180920 09:45:43.381" starttime="20180920 09:45:41.379" status="PASS"></status>
+</kw>
+<status endtime="20180920 09:45:43.382" starttime="20180920 09:45:41.300" status="PASS"></status>
+</kw>
+<status endtime="20180920 09:45:43.382" starttime="20180920 09:45:41.299" status="PASS"></status>
+</kw>
+<kw library="AddNetworkFunctions" name="User Submit New Request In Add Network">
+<kw library="AddNetworkActions" name="Click Button Next Submit Review">
+<kw library="SeleniumLibrary" name="Click Button">
+<doc>Click on the button identified by ``locator``.</doc>
+<arguments>
+<arg>${BUTTON_SUBMIT_REVIEW}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:43.386">Clicking button 'xpath=id("review-submit-submit-button")'.</msg>
+<status endtime="20180920 09:45:43.457" starttime="20180920 09:45:43.384" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:45.459">Slept 2 seconds</msg>
+<status endtime="20180920 09:45:45.460" starttime="20180920 09:45:43.458" status="PASS"></status>
+</kw>
+<status endtime="20180920 09:45:45.461" starttime="20180920 09:45:43.383" status="PASS"></status>
+</kw>
+<status endtime="20180920 09:45:45.461" starttime="20180920 09:45:43.382" status="PASS"></status>
+</kw>
+<kw library="AddNetworkFunctions" name="User Go To Home Page Download CSV">
+<kw library="Common" name="User Go To Home Page">
+<kw library="SeleniumLibrary" name="Click Element">
+<doc>Click on the element identified by ``locator``.</doc>
+<arguments>
+<arg>${BUTTON_HOME}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:45.466">Clicking element 'xpath=id("main-menu-container")/ul/li[contains(text(),"Home")]'.</msg>
+<status endtime="20180920 09:45:45.530" starttime="20180920 09:45:45.463" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>4s</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:49.531">Slept 4 seconds</msg>
+<status endtime="20180920 09:45:49.531" starttime="20180920 09:45:45.530" status="PASS"></status>
+</kw>
+<status endtime="20180920 09:45:49.532" starttime="20180920 09:45:45.462" status="PASS"></status>
+</kw>
+<kw library="AddNetworkActions" name="Get Result From File CSV">
+<kw library="SeleniumLibrary" name="Click Element">
+<doc>Click on the element identified by ``locator``.</doc>
+<arguments>
+<arg>${DOWNLOAD_CSV_IN_HOMEPAGE}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:49.536">Clicking element 'xpath=//span/i'.</msg>
+<status endtime="20180920 09:45:49.620" starttime="20180920 09:45:49.534" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:54.621">Slept 5 seconds</msg>
+<status endtime="20180920 09:45:54.622" starttime="20180920 09:45:49.620" status="PASS"></status>
+</kw>
+<kw library="OperatingSystem" name="Log Environment Variables">
+<doc>Logs all environment variables using the given log level.</doc>
+<msg level="INFO" timestamp="20180920 09:45:54.625">=:: = ::\</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.625">=C: = C:\Windows\System32</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.626">=D: = D:\sourcePCN\test</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.626">=EXITCODE = 00000001</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.626">ALLUSERSPROFILE = C:\ProgramData</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.626">APPDATA = C:\Users\nthanhduy\AppData\Roaming</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.627">CLASSWORLDS_JAR = "D:\setUpPrograms\apache-maven-3.5.4\bin\..\boot\plexus-classworlds-2.5.2.jar"</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.627">CLASSWORLDS_LAUNCHER = org.codehaus.plexus.classworlds.launcher.Launcher</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.627">COMMONPROGRAMFILES = C:\Program Files\Common Files</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.627">COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.627">COMMONPROGRAMW6432 = C:\Program Files\Common Files</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.628">COMPUTERNAME = NTHANHDUY</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.628">COMSPEC = C:\windows\system32\cmd.exe</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.628">DEFLOGDIR = C:\ProgramData\McAfee\DesktopProtection</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.628">ERROR_CODE = 0</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.628">EXEC_DIR = D:\sourcePCN\test</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.628">HOMEDRIVE = C:</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.629">HOMEPATH = \Users\nthanhduy</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.629">JAVA_HOME = C:\Program Files\Java\jdk1.8.0_181</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.629">JAVACMD = C:\Program Files\Java\jdk1.8.0_181\bin\java.exe</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.629">JVMCONFIG = \.mvn\jvm.config</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.629">LOCALAPPDATA = C:\Users\nthanhduy\AppData\Local</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.630">LOGONSERVER = \\PDC2</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.630">M2_HOME = D:\setUpPrograms\apache-maven-3.5.4</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.630">MAVEN_CMD_LINE_ARGS = -Dincludes=TS_Add_Network_10 verify</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.630">MAVEN_HOME = D:\setUpPrograms\apache-maven-3.5.4\bin\..</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.630">MAVEN_PROJECTBASEDIR = D:\sourcePCN\test</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.631">MSMPI_BIN = C:\Program Files\Microsoft MPI\Bin\</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.631">NUMBER_OF_PROCESSORS = 4</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.631">ONEDRIVE = C:\Users\nthanhduy\OneDrive</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.631">OS = Windows_NT</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.631">PATH = C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Microsoft MPI\Bin\;C:\ProgramData\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk1.8.0_181;D:\setUpPrograms\apache-maven-3.5.4\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\GitExtensions\;C:\Users\nthanhduy\AppData\Local\Programs\Python\Python36;C:\Program Files\nodejs\;D:\setUpPrograms\php7;C:\Program Files\MongoDB\Server\4.0\bin;D:\sourcePCN\arcanist\bin;C:\Users\nthanhduy\AppData\Local\Programs\Python\Python36\Scripts\;C:\Users\nthanhduy\AppData\Local\Programs\Python\Python36\;C:\Users\nthanhduy\AppData\Local\Microsoft\WindowsApps;;D:\setUpPrograms\visualStudioCode\Microsoft VS Code\bin;C:\Users\nthanhduy\AppData\Roaming\npm</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.632">PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.632">PROCESSOR_ARCHITECTURE = AMD64</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.632">PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 9, GenuineIntel</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.633">PROCESSOR_LEVEL = 6</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.633">PROCESSOR_REVISION = 9e09</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.634">PROGRAMDATA = C:\ProgramData</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.634">PROGRAMFILES = C:\Program Files</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.635">PROGRAMFILES(X86) = C:\Program Files (x86)</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.635">PROGRAMW6432 = C:\Program Files</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.635">PROMPT = $P$G</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.635">PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\windows\system32\WindowsPowerShell\v1.0\Modules;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\PowerShell\Modules\</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.635">PUBLIC = C:\Users\Public</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.635">SESSIONNAME = Console</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.636">SYSTEMDRIVE = C:</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.636">SYSTEMROOT = C:\windows</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.636">TEMP = C:\Users\NTHANH~1\AppData\Local\Temp</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.636">TMP = C:\Users\NTHANH~1\AppData\Local\Temp</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.636">UATDATA = C:\windows\CCM\UATData\D9F8C395-CAB8-491d-B8AC-179A1FE1BE77</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.637">USERDNSDOMAIN = TMA.COM.VN</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.637">USERDOMAIN = TMA</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.637">USERDOMAIN_ROAMINGPROFILE = TMA</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.637">USERNAME = nthanhduy</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.638">USERPROFILE = C:\Users\nthanhduy</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.638">VBOX_MSI_INSTALL_PATH = D:\setUpPrograms\vituralBox\</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.638">VSEDEFLOGDIR = C:\ProgramData\McAfee\DesktopProtection</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.638">WDIR = D:\</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.638">WINDIR = C:\windows</msg>
+<status endtime="20180920 09:45:54.639" starttime="20180920 09:45:54.622" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>%{HOMEDRIVE}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:54.640">C:</msg>
+<status endtime="20180920 09:45:54.641" starttime="20180920 09:45:54.639" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>%{HOMEPATH}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:54.642">\Users\nthanhduy</msg>
+<status endtime="20180920 09:45:54.643" starttime="20180920 09:45:54.641" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Wait Until Keyword Succeeds">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>1 min</arg>
+<arg>2 sec</arg>
+<arg>Download Should Be Done</arg>
+<arg>%{HOMEDRIVE}%{HOMEPATH}\\Downloads\\</arg>
+</arguments>
+<assign>
+<var>${FILE}</var>
+</assign>
+<kw library="AddNetworkActions" name="Download Should Be Done">
+<doc>Verifies that the directory has only one folder and it is not a temp file.</doc>
+<arguments>
+<arg>%{HOMEDRIVE}%{HOMEPATH}\\Downloads\\</arg>
+</arguments>
+<kw library="OperatingSystem" name="List Files In Directory">
+<doc>Wrapper for `List Directory` that returns only files.</doc>
+<arguments>
+<arg>${directory}</arg>
+</arguments>
+<assign>
+<var>${files}</var>
+</assign>
+<msg level="INFO" html="yes" timestamp="20180920 09:45:54.651">Listing contents of directory '&lt;a href="file://C:\Users\nthanhduy\Downloads"&gt;C:\Users\nthanhduy\Downloads&lt;/a&gt;'.</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.653">3 files:
+AddBlock-201892024550-123.csv
+desktop.ini
+~$.147 specification.docx</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.653">${files} = [u'AddBlock-201892024550-123.csv', u'desktop.ini', u'~$.147 specification.docx']</msg>
+<status endtime="20180920 09:45:54.654" starttime="20180920 09:45:54.650" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Should Not Match Regexp">
+<doc>Fails if ``string`` matches ``pattern`` as a regular expression.</doc>
+<arguments>
+<arg>${files[0]}</arg>
+<arg>(?i).*\\.tmp</arg>
+<arg>Chrome is still downloading a file</arg>
+</arguments>
+<status endtime="20180920 09:45:54.660" starttime="20180920 09:45:54.655" status="PASS"></status>
+</kw>
+<kw library="OperatingSystem" name="Join Path">
+<doc>Joins the given path part(s) to the given base path.</doc>
+<arguments>
+<arg>${directory}</arg>
+<arg>${files[0]}</arg>
+</arguments>
+<assign>
+<var>${file}</var>
+</assign>
+<msg level="INFO" timestamp="20180920 09:45:54.664">${file} = C:\Users\nthanhduy\Downloads\AddBlock-201892024550-123.csv</msg>
+<status endtime="20180920 09:45:54.664" starttime="20180920 09:45:54.661" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>File was successfully downloaded to ${file}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:54.667">File was successfully downloaded to C:\Users\nthanhduy\Downloads\AddBlock-201892024550-123.csv</msg>
+<status endtime="20180920 09:45:54.667" starttime="20180920 09:45:54.664" status="PASS"></status>
+</kw>
+<status endtime="20180920 09:45:54.668" starttime="20180920 09:45:54.646" status="PASS"></status>
+</kw>
+<msg level="INFO" timestamp="20180920 09:45:54.668">${FILE} = C:\Users\nthanhduy\Downloads\AddBlock-201892024550-123.csv</msg>
+<status endtime="20180920 09:45:54.669" starttime="20180920 09:45:54.643" status="PASS"></status>
+</kw>
+<kw library="AddNetworkActions" name="Process Data File">
+<arguments>
+<arg>${FILE}</arg>
+</arguments>
+<assign>
+<var>${STATUS}</var>
+</assign>
+<kw library="OperatingSystem" name="Get File">
+<doc>Returns the contents of a specified file.</doc>
+<arguments>
+<arg>${FILE_NAME}</arg>
+</arguments>
+<assign>
+<var>${FILE_CONTENT}</var>
+</assign>
+<msg level="INFO" html="yes" timestamp="20180920 09:45:54.672">Getting file '&lt;a href="file://C:\Users\nthanhduy\Downloads\AddBlock-201892024550-123.csv"&gt;C:\Users\nthanhduy\Downloads\AddBlock-201892024550-123.csv&lt;/a&gt;'.</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.674">${FILE_CONTENT} = Name,CIDR,Sub-Tags,Status,Reason
+"test-addnetwork","0.1.0.0/17","Global, EMEA, UK, 0097, 0097","failed","Block conflicts with another"
+"test-addnetwork","0.3.0.0/17",", 0097","failed","User pthethanh@...</msg>
+<status endtime="20180920 09:45:54.675" starttime="20180920 09:45:54.670" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>File Content: ${FILE_CONTENT}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:54.676">File Content: Name,CIDR,Sub-Tags,Status,Reason
+"test-addnetwork","0.1.0.0/17","Global, EMEA, UK, 0097, 0097","failed","Block conflicts with another"
+"test-addnetwork","0.3.0.0/17",", 0097","failed","User pthethanh@tma.com.vn doesn't have access to Block"
+</msg>
+<status endtime="20180920 09:45:54.676" starttime="20180920 09:45:54.675" status="PASS"></status>
+</kw>
+<kw library="AddNetworkActions" name="Split to Lines and Remove Header">
+<arguments>
+<arg>${FILE_CONTENT}</arg>
+</arguments>
+<assign>
+<var>@{LINES}</var>
+</assign>
+<kw library="String" name="Split To Lines">
+<doc>Splits the given string to lines.</doc>
+<arguments>
+<arg>${FILE_CONTENT}</arg>
+</arguments>
+<assign>
+<var>@{LINES}</var>
+</assign>
+<msg level="INFO" timestamp="20180920 09:45:54.680">3 lines returned</msg>
+<msg level="INFO" timestamp="20180920 09:45:54.681">@{LINES} = [ Name,CIDR,Sub-Tags,Status,Reason | "test-addnetwork","0.1.0.0/17","Global, EMEA, UK, 0097, 0097","failed","Block conflicts with another" | "test-addnetwork","0.3.0.0/17",", 0097","failed","User pthe...</msg>
+<status endtime="20180920 09:45:54.681" starttime="20180920 09:45:54.679" status="PASS"></status>
+</kw>
+<kw library="Collections" name="Remove From List">
+<doc>Removes and returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${LINES}</arg>
+<arg>0</arg>
+</arguments>
+<status endtime="20180920 09:45:54.684" starttime="20180920 09:45:54.681" status="PASS"></status>
+</kw>
+<msg level="INFO" timestamp="20180920 09:45:54.685">@{LINES} = [ "test-addnetwork","0.1.0.0/17","Global, EMEA, UK, 0097, 0097","failed","Block conflicts with another" | "test-addnetwork","0.3.0.0/17",", 0097","failed","User pthethanh@tma.com.vn doesn't have acces...</msg>
+<status endtime="20180920 09:45:54.685" starttime="20180920 09:45:54.677" status="PASS"></status>
+</kw>
+<kw type="for" name="${DATA} IN [ @{LINES} ]">
+<kw type="foritem" name="${DATA} = &quot;test-addnetwork&quot;,&quot;0.1.0.0/17&quot;,&quot;Global, EMEA, UK, 0097, 0097&quot;,&quot;failed&quot;,&quot;Block conflicts with another&quot;">
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${DATA}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:54.687">"test-addnetwork","0.1.0.0/17","Global, EMEA, UK, 0097, 0097","failed","Block conflicts with another"</msg>
+<status endtime="20180920 09:45:54.687" starttime="20180920 09:45:54.686" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Should Contain Any">
+<doc>Fails if ``container`` does not contain any of the ``*items``.</doc>
+<arguments>
+<arg>${STATUS_REQUSET}</arg>
+</arguments>
+<msg level="FAIL" timestamp="20180920 09:45:54.693">Variable '${STATUS_REQUSET}' not found.</msg>
+<status endtime="20180920 09:45:54.694" starttime="20180920 09:45:54.688" status="FAIL"></status>
+</kw>
+<status endtime="20180920 09:45:54.694" starttime="20180920 09:45:54.685" status="FAIL"></status>
+</kw>
+<status endtime="20180920 09:45:54.695" starttime="20180920 09:45:54.685" status="FAIL"></status>
+</kw>
+<status endtime="20180920 09:45:54.696" starttime="20180920 09:45:54.669" status="FAIL"></status>
+</kw>
+<status endtime="20180920 09:45:54.696" starttime="20180920 09:45:49.532" status="FAIL"></status>
+</kw>
+<status endtime="20180920 09:45:54.697" starttime="20180920 09:45:45.461" status="FAIL"></status>
+</kw>
+<kw type="teardown" library="Common" name="User Back To Home Page">
+<kw library="SeleniumLibrary" name="Click Element">
+<doc>Click on the element identified by ``locator``.</doc>
+<arguments>
+<arg>${BUTTON_HOME}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:54.702">Clicking element 'xpath=id("main-menu-container")/ul/li[contains(text(),"Home")]'.</msg>
+<status endtime="20180920 09:45:54.756" starttime="20180920 09:45:54.700" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg level="INFO" timestamp="20180920 09:45:59.758">Slept 5 seconds</msg>
+<status endtime="20180920 09:45:59.758" starttime="20180920 09:45:54.757" status="PASS"></status>
+</kw>
+<status endtime="20180920 09:45:59.759" starttime="20180920 09:45:54.698" status="PASS"></status>
+</kw>
+<doc>user attempting to create a block of any size where a network or block currently exists (whether the new block is either smaller, equal, or larger) should not be possible</doc>
+<tags>
+<tag>TS_Add_Network</tag>
+<tag>TS_Add_Network_10</tag>
+</tags>
+<status critical="yes" endtime="20180920 09:45:59.759" starttime="20180920 09:45:25.400" status="FAIL">Variable '${STATUS_REQUSET}' not found.</status>
+</test>
+<kw type="teardown" library="SeleniumLibrary" name="Close Browser">
+<doc>Closes the current browser instance.</doc>
+<status endtime="20180920 09:46:00.386" starttime="20180920 09:45:59.764" status="PASS"></status>
+</kw>
+<status endtime="20180920 09:46:00.387" starttime="20180920 09:44:43.794" status="FAIL"></status>
+</suite>
+<status endtime="20180920 09:46:00.393" starttime="20180920 09:44:43.783" status="FAIL"></status>
+</suite>
+<status endtime="20180920 09:46:00.401" starttime="20180920 09:44:43.594" status="FAIL"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1">TS_Add_Network</stat>
+<stat pass="0" fail="1">TS_Add_Network_10</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" name="Robot" id="s1">Robot</stat>
+<stat pass="0" fail="1" name="Addnetwork" id="s1-s1">Robot.Addnetwork</stat>
+<stat pass="0" fail="1" name="TSAddNetwork" id="s1-s1-s1">Robot.Addnetwork.TSAddNetwork</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
