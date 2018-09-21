@@ -1,8 +1,8 @@
 *** Variables ***
 ${ID}                                 123
-${CIDR}                               0.94.0.0/16
-${CIDR_MULTIPLE_1}                    0.97.0.0/16
-${CIDR_MULTIPLE_2}                    0.98.0.0/16
+${CIDR}                               0.120.0.0/16
+${CIDR_MULTIPLE_1}                    0.121.0.0/16
+${CIDR_MULTIPLE_2}                    0.122.0.0/16
 ${CIDR_SMALLER}                       0.1.0.0/17
 ${CIDR_SMALLER_MULTIPLE_1}            0.2.0.0/17
 ${CIDR_SMALLER_MULTIPLE_2}            0.3.0.0/17
@@ -32,3 +32,11 @@ ${NAME_ADDNETWORK_TS_14_2}                    test-addnetwork
 ${SUB_GROUP_MULTIPLE_MODE}            0097
 ${LINE_INDEX_1}                       1
 ${LINE_INDEX_2}                       3
+${EXPECT_STATUS_FAILED}                      "failed"
+${EXPECT_STATUS_SUCCESS}                     "success"
+${CIDR_TS_12_1}                      0.12.0.0/16
+${CIDR_TS_12_2}                      0.13.0.0/16
+${NAME_ADDNETWORK_TS_12_1}           test-addnetwork
+${NAME_ADDNETWORK_TS_12_2}           test-addnetwork
+${SUB_GROUP_TS_12_1}                 0097
+${SUB_GROUP_TS_12_2}                 0098

@@ -3,13 +3,14 @@ Library    SeleniumLibrary
 Library    OperatingSystem  
 Library    Collections    
 Library    String   
-Library    BuiltIn    
+Library    BuiltIn
 Resource    AddNetworkVariables.robot
 Resource    ../../home/HomeVariables.robot
+Resource    ../../../../test/resources/data/login/LoginData.robot
 
 *** Keywords ***
 Module Add Net Work Should Be Appeared
-    Wait Until Element Is Visible    ${DESCRIPTION_ADD_NETWORK}  
+    Wait Until Element Is Visible    ${DESCRIPTION_ADD_NETWORK}      
     Wait Until Element Is Visible    ${BUTTON_ADD_NETWORK}
     Wait Until Element Is Visible    ${BUTTON_HELP_ADD_NETWORK}
     Wait Until Element Is Visible    ${BUTTON_LOVE_ADD_NETWORK}
@@ -54,9 +55,11 @@ Input Text To Request ID Text Field
 Click Container
     Click Element    ${CONTAINER_REQUEST}
     Sleep    2s
+    
 Click Multiple Mode 
     Click Element  ${MULTIPLE_MODE}
     Sleep    2s    
+    
 Click Element In Frame IPAM
     [Arguments]    ${ELEMENT}
     Click Element    ${ELEMENT}
@@ -160,28 +163,26 @@ Split to Lines and Remove Header
     [Return]    @{LINES}  
     
 Process Data File
-    [Arguments]    ${FILE_NAME}
+    [Arguments]    ${FILE_NAME}    ${EXPECT_STATUS}
     ${FILE_CONTENT}=   Get File    ${FILE_NAME}
     Log    File Content: ${FILE_CONTENT}
+    Should Contain    ${FILE_CONTENT}    ${EXPECT_STATUS}
     @{LINES}=    Split to Lines and Remove Header   ${FILE_CONTENT}     
     : FOR    ${DATA}    IN    @{LINES}
-    \    Log    ${DATA}
-    \    Should Contain Any    ${STATUS_REQUSET}    
+    \    Log    ${DATA}  
     \    @{COLUMNS}=    Split String    ${DATA}    separator=,
-    Log    ${COLUMNS}
     [Return]    ${COLUMNS}     
               
 Get Result From File CSV
+    #${DOWNLOAD_DIR}          Replace String    ${CURDIR}    "\"    "\ "  
     # %{HOMEDRIVE}%{HOMEPATH}\\Downloads\\
+    [Arguments]    ${EXPECT_STATUS}
     Click Element    ${DOWNLOAD_CSV_IN_HOMEPAGE}    
     Sleep    5s  
-    Log Environment Variables
-    Log    %{HOMEDRIVE}  
-    Log    %{HOMEPATH}               
-    ${FILE}    Wait Until Keyword Succeeds    1 min    2 sec    Download Should Be Done   %{HOMEDRIVE}%{HOMEPATH}\\Downloads\\
-    ${STATUS}=   Process Data File    ${FILE}
-    Log     ${STATUS}    
-    Remove Files    %{HOMEDRIVE}%{HOMEPATH}\\Downloads\\*.csv
+    Log    ${DOWNLOAD_PATH}      
+    ${FILE}    Wait Until Keyword Succeeds    1 min    2 sec    Download Should Be Done   ${DOWNLOAD_PATH}  
+    ${STATUS}=   Process Data File    ${FILE}    ${EXPECT_STATUS}  
+    Remove Files     ${DOWNLOAD_PATH}${/}*.csv
     [Return]    ${STATUS}
     
 Download Should Be Done

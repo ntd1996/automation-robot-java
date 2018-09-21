@@ -10,7 +10,7 @@ User Input Text Username And Password
     
 User Login To PCN Portal
     [Arguments]        ${USERNAME}    ${PASSWORD}
-    User Input Text Username And Password    ${USERNAME}    ${PASSWORD}    
+    User Input Text Username And Password    ${USERNAME}    ${PASSWORD}  
     Click Button Login
     Sleep    4s  
- 
+     

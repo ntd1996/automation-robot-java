@@ -69,7 +69,7 @@ User Submitting A Valid Request Should Result In Appropriate Block Creation With
     [Tags]    TS_Add_Network_7
     User Go To Form Add Network    ${ID}
     User Add New Network    ${CIDR}    ${NAME_ADDNETWORK_TS_7}    ${IPAM}
-    User Go To Home Page Download CSV
+    User Go To Home Page Download CSV    ${EXPECT_STATUS_SUCCESS}
     User Go To Self Service Page
     User Go To Form Add Network    ${ID}
     User Choose IPAM Parent    ${IPAM}
@@ -82,10 +82,10 @@ User Attempting To Create Block Of Any Size Where A Netowrk Or Block Currently E
     [Tags]    TS_Add_Network_10
     User Go To Form Add Network    ${ID}
     User Go To Mulltiple Mode        ${LINE_INDEX_1}    ${LINE_INDEX_2}
-    User Input Text To Text Field Multiple Mode    ${CIDR_SMALLER}    ${NAME_ADDNETWORK_TS_10_1}    ${SUB_GROUP_MULTIPLE_MODE}    ${CIDR_SMALLER_MULTIPLE_2}    ${NAME_ADDNETWORK_TS_10_2}    ${SUB_GROUP_MULTIPLE_MODE}
+    User Input Text To Text Field Multiple Mode   ${CIDR_SMALLER_MULTIPLE_1}      ${NAME_ADDNETWORK_TS_10_1}    ${SUB_GROUP_MULTIPLE_MODE}    ${CIDR_SMALLER_MULTIPLE_2}    ${NAME_ADDNETWORK_TS_10_2}    ${SUB_GROUP_MULTIPLE_MODE}
     User Go To Submit Form In Add Network
     User Submit New Request In Add Network 
-    User Go To Home Page Download CSV
+    User Go To Home Page Download CSV    ${EXPECT_STATUS_FAILED}
     User Go To Self Service Page
     User Go To Form Add Network    ${ID}
     User Choose IPAM Parent    ${IPAM}
@@ -101,7 +101,7 @@ User Selecting A Block For Which A User Does Not Have Write Access Should Genera
     User Input Text To Text Field Multiple Mode    ${CIDR_NOT_HAVE_PERMISSION}    ${NAME_ADDNETWORK_TS_11_1}    ${SUB_GROUP_MULTIPLE_MODE}    ${CIDR_NOT_HAVE_PERMISSION_2}    ${NAME_ADDNETWORK_TS_11_2}    ${SUB_GROUP_MULTIPLE_MODE}
     User Go To Submit Form In Add Network
     User Submit New Request In Add Network 
-    User Go To Home Page Download CSV
+    User Go To Home Page Download CSV    ${EXPECT_STATUS_FAILED}
     User Go To Self Service Page
     User Go To Form Add Network    ${ID}
     User Choose IPAM Parent    ${IPAM_TEST_PERMISSION}
@@ -125,7 +125,7 @@ User Add Invalid CIDR Should Generate An Error(Multiple mode)
     User Input Text To Text Field Multiple Mode    ${CIDR_INVALID}    ${NAME_ADDNETWORK_TS_13_1}    ${SUB_GROUP_MULTIPLE_MODE}    ${CIDR_INVALID_2}    ${NAME_ADDNETWORK_TS_13_2}    ${SUB_GROUP_MULTIPLE_MODE}
     User Go To Submit Form In Add Network
     User Submit New Request In Add Network 
-    User Go To Home Page Download CSV
+    User Go To Home Page Download CSV    ${EXPECT_STATUS_FAILED}
     User Go To Self Service Page
     User Go To Form Add Network    ${ID}
     User Choose IPAM Parent    ${IPAM}
@@ -141,15 +141,13 @@ User Submitting A Valid Request Should Result In Appropriate Block Creation(Mult
     User Input Text To Text Field Multiple Mode    ${CIDR_MULTIPLE_1}    ${NAME_ADDNETWORK_TS_14_1}    ${SUB_GROUP_MULTIPLE_MODE}    ${CIDR_MULTIPLE_2}    ${NAME_ADDNETWORK_TS_14_2}    ${SUB_GROUP_MULTIPLE_MODE}
     User Go To Submit Form In Add Network
     User Submit New Request In Add Network 
-    User Go To Home Page Download CSV
+    User Go To Home Page Download CSV    ${EXPECT_STATUS_SUCCESS}
     User Go To Self Service Page
     User Go To Form Add Network    ${ID}
     User Choose IPAM Parent    ${IPAM}
     User Check Request Sucess In Table    ${CIDR_MULTIPLE_1}
     User Check Request Sucess In Table    ${CIDR_MULTIPLE_2}
     User Cancel Form Add New Network 
-
-    
     
     
     

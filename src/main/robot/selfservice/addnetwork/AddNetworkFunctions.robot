@@ -184,7 +184,7 @@ User Submit Request
     Click Button Next Submit Review   
     
 User Not Enter Data To Require Field In Multiple Mode
-    User Input Text To Text Field Multiple Mode    abc    123    123    123    123    123
+    User Input Text To Text Field Multiple Mode    ${CIDR_TS_12_1}     ${NAME_ADDNETWORK_TS_12_1}      ${SUB_GROUP_TS_12_1}    ${CIDR_TS_12_2}     ${NAME_ADDNETWORK_TS_12_2}      ${SUB_GROUP_TS_12_2}
     ${LENGTH_TEXT_FIELD6}=    Get Value    ${TEXT_FIELD_6}  
     ${LENGTH_TEXT_FIELD7}=    Get Value    ${TEXT_FIELD_7}
     ${LENGTH_TEXT_FIELD9}=    Get Value    ${TEXT_FIELD_9}
@@ -210,8 +210,9 @@ User Cancel Request Form
     Click Button Cancel In Request Form  
     
 User Go To Home Page Download CSV
+    [Arguments]    ${EXPECT_STATUS}
     User Go To Home Page    
-    Get Result From File CSV
+    Get Result From File CSV    ${EXPECT_STATUS}
     
 User Check New Request In Table Sub-Network
     User Go To Self Service Page

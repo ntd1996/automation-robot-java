@@ -1,7 +1,10 @@
 *** Settings ***
 Library    SeleniumLibrary  
+Library    String 
+Library    BuiltIn       
 Resource    ../variable/Elements.robot  
 Resource    ../../login/LoginFunctions.robot
+Resource    ../../../../test/resources/data/login/LoginData.robot
 
 *** Keywords ***
 User Go To Self Service Page
@@ -23,8 +26,11 @@ User Back To Home Page
     Sleep    5s
     
 User Go To PCN Portal Resource With PCN URL
-    [Arguments]        ${USERNAME}    ${PASSWORD}
-    Open Browser    ${URL}        ${BROWSER}      
+    [Arguments]        ${USERNAME}    ${PASSWORD} 
+    ${option}=    Run Keyword If   "${BROWSER}" in ["Chrome","chrome","gc"]    Replace String    ${CHROME_OPTIONS}    \\    \\\\ 
+    ...    ELSE     Replace String    ${FIREFOX_OPTIONS}    \\    \\\\   
+    Log    ${option}
+    Open Browser    ${URL}        ${BROWSER}      browserOptions=${option}
 
     Maximize Browser Window
     User Login To PCN Portal     ${USERNAME}    ${PASSWORD}
