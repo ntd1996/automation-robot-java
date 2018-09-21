@@ -10,12 +10,6 @@
 
 	<dependencies>
 		<dependency>
-		    <groupId>org.robotframework</groupId>
-		    <artifactId>robotframework</artifactId>
-		    <version>3.0.4</version>
-		    <scope>compile</scope>
-		</dependency>
-		<dependency>
 		    <groupId>com.github.hi-fi</groupId>
 		    <artifactId>robotframework-seleniumlibrary</artifactId>
 		    <version>3.12.0.1</version>
@@ -27,42 +21,11 @@
 		    <artifactId>robotframework-easycsvmap</artifactId>
 		    <version>0.0.4</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.robotframework/javalib-core -->
-		<dependency>
-		    <groupId>org.robotframework</groupId>
-		    <artifactId>javalib-core</artifactId>
-		    <version>1.2.1</version>
-		</dependency>
-		
 	</dependencies>
 
 	<build>
-    	<sourceDirectory>src/main/robot</sourceDirectory>
-		<plugins>
-	    	<plugin>
-		        <groupId>org.codehaus.mojo</groupId>
-		        <artifactId>properties-maven-plugin</artifactId>
-		        <version>1.0.0</version>
-		        <executions>
-		        	<execution>
-						<goals>
-							<goal>set-system-properties</goal>
-						</goals>
-						<configuration>
-							<properties>
-								<property>
-									<name>webdriver.chrome.driver</name>
-									<value>src/main/resources/drivers/chromedriver.exe</value>
-								</property>
-								<property>
-									<name>webdriver.gecko.driver</name>
-									<value>src/main/resources/drivers/geckodriver.exe</value>
-								</property>
-							</properties>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
+    	<!-- <sourceDirectory>src/main/robot</sourceDirectory>  -->
+    	<plugins>
 			<plugin>
 				<groupId>org.robotframework</groupId>
 				<artifactId>robotframework-maven-plugin</artifactId>
@@ -75,50 +38,60 @@
 					</execution>
 				</executions>
 				<dependencies>
+					<dependency>
+					    <groupId>org.robotframework</groupId>
+					    <artifactId>robotframework</artifactId>
+					    <version>3.0.4</version>
+					</dependency>
 				</dependencies>
 				<configuration>
            			<testCasesDirectory>${project.basedir}/src/test/robot</testCasesDirectory>
-           			<extraPathDirectories>${project.basedir}/src/main/resources/libraries</extraPathDirectories>
+           			<extraPathDirectories>${project.basedir}/src/main/python</extraPathDirectories>
+           			<externalRunner>
+						<jvmArgs>
+							<jvmArg>-Dwebdriver.gecko.driver=${webdriver.gecko.driver}</jvmArg>
+							<jvmArg>-Dwebdriver.chrome.driver=${webdriver.chrome.driver}</jvmArg>
+						</jvmArgs>
+					</externalRunner>
       			</configuration>
 			</plugin>
 		</plugins>
-		<pluginManagement>
-			<plugins>
-				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
-				<plugin>
-					<groupId>org.eclipse.m2e</groupId>
-					<artifactId>lifecycle-mapping</artifactId>
-					<version>1.0.0</version>
-					<configuration>
-						<lifecycleMappingMetadata>
-							<pluginExecutions>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>
-											org.codehaus.mojo
-										</groupId>
-										<artifactId>
-											properties-maven-plugin
-										</artifactId>
-										<versionRange>
-											[1.0.0,)
-										</versionRange>
-										<goals>
-											<goal>
-												set-system-properties
-											</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore></ignore>
-									</action>
-								</pluginExecution>
-							</pluginExecutions>
-						</lifecycleMappingMetadata>
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
 	</build>
+
+	<profiles>
+		<profile>
+	  		<id>mac</id>
+  			<activation>
+    			<os>
+      				<family>mac</family>
+    			</os>
+  			</activation>
+		</profile>
+		<profile>
+			<id>unix</id>
+		  	<activation>
+		    	<os>
+		      		<family>unix</family>
+		     		<name>Linux</name>
+		    	</os>
+		  	</activation>
+		  	<properties>
+				<webdriver.gecko.driver>${project.basedir}/src/main/resources/drivers/firefox/geckodriver-linux64</webdriver.gecko.driver>
+				<webdriver.chrome.driver>${project.basedir}/src/main/resources/drivers/chrome/chromedriver-linux64</webdriver.chrome.driver>
+			</properties>
+		</profile>
+		<profile>
+		  	<id>windows</id>
+	  		<activation>
+	    		<os>
+	      			<family>windows</family>
+	    		</os>
+	  		</activation>
+	  		<properties>
+				<webdriver.gecko.driver>${project.basedir}/src/main/resources/drivers/firefox/geckodriver-win64.exe</webdriver.gecko.driver>
+				<webdriver.chrome.driver>${project.basedir}/src/main/resources/drivers/chrome/chromedriver-win64.exe</webdriver.chrome.driver>
+			</properties>
+		</profile>
+	</profiles>
 
 </project>
